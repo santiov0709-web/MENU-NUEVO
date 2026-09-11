@@ -25,14 +25,14 @@ export default function MenuItem({ item, index }: { item: MenuItemType, index: n
         initial: { opacity: 0, y: 20 },
         whileInView: { opacity: 1, y: 0 },
         viewport: { once: true, margin: "-50px" },
-        transition: { duration: 0.8, delay: (index % 5) * 0.1, ease: [0.16, 1, 0.3, 1] },
+        transition: { duration: 0.8, delay: (index % 5) * 0.1, ease: "easeOut" },
       };
 
   const Wrapper = isMobile ? "div" : motion.div;
 
   return (
     <Wrapper
-      {...motionProps}
+      {...(motionProps as any)}
       className="group relative flex flex-col gap-2 p-5 md:p-6 border border-white/5 hover:border-gold-500/30 rounded-xl transition-all duration-700 cursor-none overflow-hidden"
       style={{
         backgroundColor: 'var(--color-surface-glass)',

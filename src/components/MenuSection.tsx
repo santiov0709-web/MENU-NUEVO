@@ -35,7 +35,7 @@ export default function MenuSection({ title, items, id }: MenuSectionProps) {
   return (
     <section id={id} className="py-24 relative">
       <div className="max-w-4xl mx-auto px-6">
-        <MotionWrapper {...motionProps} className="mb-16 flex items-end gap-6">
+        <MotionWrapper {...(motionProps as any)} className="mb-16 flex items-end gap-6">
           <h2 className="font-serif text-5xl md:text-6xl text-gold-gradient tracking-wide whitespace-nowrap drop-shadow-lg pb-1">
             {title}
           </h2>
